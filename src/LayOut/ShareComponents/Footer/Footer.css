@@ -1,0 +1,100 @@
+.container-eight {
+    max-width: 1400px;
+    height: 349px;
+    background: #cdcfc8;
+}
+
+.hero-area8 {
+    display: flex;
+}
+
+.loto-side {
+    margin-left: 136px;
+    margin-top: 91px;
+}
+
+.loto-side img {
+    width: 289px;
+    height: 90px;
+    padding: 8.55px 1.276px 9.525px 2.177px;
+}
+
+.loto-side p {
+    color: #000;
+    font-family: Quicksand;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 203.5%;
+    margin-top: 22px;
+}
+
+.coustomer {
+    margin-left: 110px;
+    margin-top: 100px;
+}
+
+.coustomer h2 {
+    width: 178px;
+    color: #424B25;
+    font-family: Quicksand;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.coustomer p {
+    color: #32391C;
+    font-family: Quicksand;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 203.5%;
+    margin-top: 15px;
+}
+
+.about {
+    margin-left: 46px;
+    margin-top: 100px;
+}
+
+.about h2 {
+    color: #424B25;
+    font-family: Quicksand;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.about p {
+    color: #32391C;
+    font-family: Quicksand;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 203.5%;
+    margin-top: 15px;
+}
+
+.services {
+    margin-top: 100px;
+}
+
+.services h2 {
+    color: #424B25;
+    font-family: Quicksand;
+    font-size: 20px;
+    font-weight: 600;
+    margin-left: 19px;
+}
+
+.services p {
+    color: #32391C;
+    font-family: Quicksand;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 203.5%;
+    margin-top: 15px;
+    margin-left: 18px;
+}
+
+.last-border img {
+    width: 1520px;
+    height: 2px;
+    margin-top: 147px;
+}

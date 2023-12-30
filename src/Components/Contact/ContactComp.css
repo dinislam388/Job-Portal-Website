@@ -1,0 +1,67 @@
+*{ 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.conatiner {
+    height: 110vh;
+    max-width: 1440px;
+    padding: 2rem;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+}
+
+/* .contactHeading {
+
+} */
+
+.conatctImg {
+    width: 30%;
+}
+
+.inputFild input {
+    margin-top: 20px;
+    padding: 15px 10px 13px 10px;
+    background-color: ;
+    border-radius: 5px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    /* border-bottom: 1px solid blue; */
+    outline: none;
+    font-size: 16px;
+    color: red;
+    width: 90%;
+}
+
+.inputBorder {
+    /* border: 1px solid blue; */
+    background-color: #dbdbdb;
+    border: 1px solid black;
+    box-shadow: 0px 0px 25px -5px inset;
+    padding: 30px;
+    width: 38%;
+    height: 95vh;
+    margin: auto;
+}
+
+.inputFild button{
+    background-color: #012120;
+    margin-top: 30px;
+    padding: 10px 40px;
+    font-size: 18px;
+    border-radius: 50px;
+    border: none;
+    color: #fff;
+    width: 90%;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.inputFild button:hover {
+    color: #fff;
+    background-color: #023e3d;
+}

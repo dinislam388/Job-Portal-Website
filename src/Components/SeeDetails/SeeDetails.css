@@ -1,0 +1,50 @@
+.detailsCard {
+    background-color: #f8f0cd;
+    /* width: 100%; */
+    margin: auto;
+    text-align: center;
+    padding: 4rem;
+    /* color: #f8b057; */
+    color: #fff;
+}
+
+.details {
+    background-color: #363062;
+    width: 30%;
+    margin: auto;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.details h2 {
+    color: #fab25a;
+}
+
+.backBtn {
+    padding: 6px 3rem;
+    margin-top: 10px;
+    border-radius: 32px;
+    border: none;
+    cursor: pointer;
+    background-color: #c3bdee;
+    color: #0b0900;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: all .3s ease-out;
+}
+
+.backBtn:hover{
+    background-color: #fff;
+    color: #000;
+}
+
+.detailsHeading {
+    border-bottom: 1px dashed #fff;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    
+}
+
+.detailsHeading ~ *{
+    margin-bottom: 5px;
+}

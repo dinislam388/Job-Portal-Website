@@ -1,0 +1,23 @@
+.loading1st {
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+}
+
+.loading2nd {
+    margin-bottom: 1rem; 
+    border-radius: 9999px; 
+    border-top-width: 4px; 
+    border-bottom-width: 4px; 
+    border-color: #2563EB; 
+    width: 5rem; 
+    height: 5rem; 
+    animation: spin 1s linear infinite;
+}
+
+.loading3rd {
+    font-weight: 700; 
+    color: #EF4444; 
+}
