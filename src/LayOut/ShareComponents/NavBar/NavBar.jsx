@@ -8,7 +8,8 @@ const NavBar = () => {
             <div>
             <div className="header">
             <div className="logo">
-                <img src={logo} alt="Logo" />
+                {/* <img src={logo} alt="Logo" /> */}
+                <h1>HJ</h1>
             </div>
                 <div className="navBar">
                     <ul>

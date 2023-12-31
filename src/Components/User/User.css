@@ -5,7 +5,7 @@
 }
 
 .heading {
-    background-color: #f8f0cd;
+    background-color: #ebecee;
     text-align: center;
     color: #2d2d2d;
     padding: 20px;
@@ -13,26 +13,26 @@
 
 .card {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    background-color: #f8f0cd;
-    text-align: center;
-    justify-content: center;
+    background-color: #ebecee;
     padding: 30px;
 }
 
+.jobLogo img {
+    width: 15%;
+}
+
 .cards {
-    background-color: #ee722f;
-    text-align: center;
-    padding: 2rem;
+    background-color: #fff;
+    padding: .5rem;
     transition: all .3s ease;
-    color: #fff;
+    color: black;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    gap: 1rem;
-    max-height: 12rem;
+    gap: rem;
+    height: 40vh;
 }
 
 .cards:hover {
@@ -43,7 +43,6 @@
 }
 
 .dtailsBtn button {
-    /* background-color: #2d2d2d; */
     border: none;
     padding: .5rem 3rem;
     border-radius: 2rem;
