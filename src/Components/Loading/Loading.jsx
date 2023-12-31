@@ -1,11 +1,36 @@
-import "./LoadingStyle.css"
+import "./LoadingStyle.css";
 const Loading = () => {
   return (
-    <div>
-      <div className="loading1st">
-        <div className="loading2nd"></div>
-        <p className="loading3rd">Loading...</p>
+    <div className="loadingContainer">
+      {/* <div className="icon">
+        <div
+          className="bar"
+          style={{backgroundColor: "#3498db", marginLeft: "60px"}}
+        ></div>
+        <div
+          className="bar"
+          style={{backgroundColor: '#e74c3c', marginLeft: "20px"}}
+        ></div>
+        <div
+          className="bar"
+          style={{backgroundColor: '#f1c40f', marginLeft: "20px"}}
+        ></div>
+        <div
+          className="bar"
+          style={{backgroundColor: "#2eB869", marginLeft: "60px"}}
+        ></div>
+      </div> */}
+  {/* ============================================================== */}
+
+      <div class="container">
+      <div class="ring"></div>
+      <div class="ring"></div>
+      <div class="ring"></div>
       </div>
+
+
+
+
     </div>
   );
 };

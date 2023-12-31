@@ -6,7 +6,7 @@ const LogIn = () => {
             <section className="fullForm">
   <div className="signUpFullForm">
     <div className="headImg">
-      <div class="mb-2">
+      <div>
       <img src={myImg} alt="" />
       </div>
       <h2 className="headingText">

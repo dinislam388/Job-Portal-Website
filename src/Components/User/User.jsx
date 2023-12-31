@@ -8,12 +8,12 @@ const User = ({ user }) => {
         <div className="jobLogo">
           <img src={logo} alt="" />
         </div>
-        <h2>{companyName}</h2>
-        <h4>{position}</h4>
-        <h4>{title}</h4>
-        <p>{description}</p>
+        <h3 className="companyName">{companyName}</h3>
+        <h2 className="jobPosition">{position}</h2>
+        <h4 className="jobTitle">{title}</h4>
+        <p className="jobDescription">Desciption: This is see details.....</p>
         <div className=" bg-white text-black rounded-full cursor-pointer hover:bg-slate-600 hover:text-white py-1 duration-300">
-          <Link to={`/users/${id}`}>
+          <Link className="dtailsBtn" to={`/users/${id}`}>
             <button>See Details</button>
           </Link>
         </div>
