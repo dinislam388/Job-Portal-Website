@@ -1,6 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans:wght@500;600;700&display=swap');
-
-
 * {
     margin: 0;
     padding: 0;
@@ -9,16 +6,11 @@
     box-sizing: border-box;
 }
 
-body {
-    /* background-color: #040016; */
-}
-
 .fullBody {
     width: 100%;
     height: 100vh;
-    font-family: 'Open Sans', sans-serif;
-    /* background: linear-gradient(0deg, #1C217C, #1971D2); */
-    background-color: #0B0221;
+    
+    background-color: #cbdaf4;
 }
 
 .hero-area {
@@ -30,8 +22,8 @@ body {
     width: 600px;
     height: 500px;
     margin-right: 50px;
-    margin-top: 90px;
-    border-radius: 30%;
+    margin-top: 30px;
+    border-radius: 3%;
     
 }
 
@@ -41,22 +33,26 @@ body {
 }
 
 .hero-text h1 {
-    font-size: 50px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    margin-bottom: 15px;
-    color: #fff;
+    font-size: 61px;
+    line-height: 86px;
+    font-weight: 800;
+    color: #17171d;
+    margin-bottom: 30px;
+    font-family: 'Poppins', sans-serif;
 }
 
 .hero-text h1 span {
-    color: #FD7100;
+    background-color: #1967D2;
+    color: #fff;
+    padding: 0px 10px 0 10px ;
+    border-radius: 10px;
 }
 
 .hero-text p {
     font-size: 18px;
     font-weight: 400;
     margin-bottom: 40px;
-    color: #fff;
+    color: #666666;
 }
 
 .hero-text .btn {

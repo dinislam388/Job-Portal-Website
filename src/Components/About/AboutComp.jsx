@@ -4,7 +4,7 @@ const AboutComp = () => {
     <div>
       <div>
         <div>
-          <div className="text-center p-12 ">
+          <div className="aboutContainer">
             <h1 className="text-4xl text-[#FF7501] mb-4">About Us</h1>
             <h2 className="text-2xl mb-5">Welcome to React_Router_DOM!</h2>
             <p className="aboutP">

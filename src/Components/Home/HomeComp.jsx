@@ -5,9 +5,8 @@ const HomeComp = () => {
         <div className='fullBody'>
             <div class="hero-area">
             <div class="hero-text">
-                <h1>Better Solution <br/> <span>For Your </span>
-                <br/> Business.</h1>
-                <p>We are team of talented Designers making Websites with <br/> HTML CSS & JavaScript (React).</p>
+                <h1>Best Platform<br />Find Your <br /> Perfect <span>JOB</span>  </h1>
+                <p>Discover an array of thrilling career opportunities tailored to your interests and academic focus. Your ideal job is on the horizon, ready for you to seize.</p>
                 <div class="btn">
                     <div class="btn-a">
                         <button>Join</button>

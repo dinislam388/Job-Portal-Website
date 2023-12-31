@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Sansita:wght@700&display=swap');
+
 *{ 
     margin: 0;
     padding: 0;
@@ -6,16 +8,19 @@
 }
 
 .header {
+  position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: hsl(250, 46%, 12%);
+    background-color: #bbceee;
+    /* background: #eee; */
     padding: 18px;
-    border-bottom: 1px solid white;
+    /* border-bottom: 1px solid white; */
+    box-shadow: 0 0 25px 5px rgba(123, 170, 172, 0.826);
 }
 
 .logo {
-    background-color: #fff;
+    background-color: #ebf0f8;
     border-radius: 50%;
     width: 3.5rem;
     height: 3.5rem;
@@ -23,6 +28,9 @@
     align-items: center;
     justify-content: center;
     margin-left: 20px;
+    box-shadow: 0 0 5px 5px rgb(140, 220, 233);
+    font-family: 'Sansita', sans-serif;
+
 }
 
 .logo img {

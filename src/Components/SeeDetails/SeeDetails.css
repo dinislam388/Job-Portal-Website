@@ -1,50 +1,83 @@
 .detailsCard {
-    background-color: #f8f0cd;
+    background-color: #edeeee;
     /* width: 100%; */
     margin: auto;
     text-align: center;
     padding: 4rem;
     /* color: #f8b057; */
-    color: #fff;
+    color: #fff; 
 }
 
 .details {
-    background-color: #363062;
-    width: 30%;
+    /* background-color: #ffffff; */
+    width: 70%;
     margin: auto;
     padding: 30px;
     border-radius: 15px;
+    color: #2D2D2D;
+    background-color: #e4e4e4;
+    border: 1px solid black;
+    box-shadow: 0px 0px 25px -5px inset;
+    padding: 30px;
 }
 
 .details h2 {
-    color: #fab25a;
+    color: #0866FF;
+    margin-bottom: 15px;
+}
+
+.titleDetails {
+    font-size: 18px;
+    color: #2D2D2D;
+    text-align: start;
+}
+
+.positionDetails {
+    font-size: 17px;
+    color: #2D2D2D;
+    text-align: start;
+}
+
+.descriptionDetails {
+    color: #2D2D2D;
+    text-align: start;
+}
+
+.extraInfo p {
+    text-align: start;
+    margin-bottom: 10px;
 }
 
 .backBtn {
+    width: 100%;
     padding: 6px 3rem;
     margin-top: 10px;
     border-radius: 32px;
     border: none;
     cursor: pointer;
-    background-color: #c3bdee;
-    color: #0b0900;
+    background-color: #b3b4b6;
+    color: #2D2D2D;
     font-size: 1.1rem;
     font-weight: bold;
     transition: all .3s ease-out;
 }
 
+.detailsJobLogo{
+    width: 15%;
+}
+
 .backBtn:hover{
-    background-color: #fff;
-    color: #000;
+    background-color: #0866FF;
+    color: #fff;
 }
 
 .detailsHeading {
-    border-bottom: 1px dashed #fff;
+    border-bottom: 1px dashed black;
     padding-bottom: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     
 }
 
 .detailsHeading ~ *{
-    margin-bottom: 5px;
+    margin-bottom: 7px;
 }
