@@ -8,11 +8,9 @@ const HomeComp = () => {
                 <h1>Best Platform<br />Find Your <br /> Perfect <span>JOB</span>  </h1>
                 <p>Discover an array of thrilling career opportunities tailored to your interests and academic focus. Your ideal job is on the horizon, ready for you to seize.</p>
                 <div class="btn">
-                    <div class="btn-a">
-                        <button>Join</button>
-                    </div>
+                  
                     <div class="btn-b">
-                        <button>◀ Watch Video</button>
+                        <button>See All Jobs</button>
                     </div>
                 </div>
             </div>

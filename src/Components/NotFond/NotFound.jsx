@@ -1,7 +1,9 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useRouteError } from "react-router-dom";
 import "./NotFound.css"
 import ErrorPage from './NotFound page img.png'
 const NotFound = () => {
+    const err = useRouteError()
+    console.log(err.error.message);
     const navigate = useNavigate()
     const handleBack = () => {
         navigate(-1)
@@ -11,6 +13,7 @@ const NotFound = () => {
     }
     return (
         <div className="bg-black h-[100vh]">
+            <p>{err.error.message}</p>
             <img className="w-[40%] m-auto " src={ErrorPage} alt="" />
             {/* <img className="w-[70%] m-auto " src={"https://kfg6bckb.media.zestyio.com/yalantis-interactive-404.gif"} alt="" /> */}
             <div className="text-center ml-[10px] flex gap-5 items-center justify-center">

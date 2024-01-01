@@ -4,18 +4,15 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
 }
 
 .header {
-  position: relative;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: #bbceee;
-    /* background: #eee; */
     padding: 18px;
-    /* border-bottom: 1px solid white; */
     box-shadow: 0 0 25px 5px rgba(123, 170, 172, 0.826);
 }
 
@@ -39,24 +36,28 @@
 
 .navBar ul {
     display: flex;
-    gap: 30px;
+    gap: 25px;
     font-size:18px;
     margin-right: 20px;
     font-family: 'Poppins', sans-serif;
   }
   
   .navBar a {
-    color: #fff;
+    color: #7761DC;
     transition: all .3s ease;
     text-decoration: none;
+    padding: 5px;
+    border-radius: 5px;
   }
 
   .navBar a:hover {
-    color: #b88dae;
+    color: #0bb4e3;
   }
 
- ul .active {
-    color: #b88dae;
+.active {
+    background-color: rgb(110, 221, 255);
+    padding: 5px;
+
   }
 
 

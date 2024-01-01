@@ -1,33 +1,70 @@
-import { NavLink } from "react-router-dom";
-import logo from "./logo (2).png"
-import "./NavBar.css"
+import { NavLink, useNavigate } from "react-router-dom";
+import "./NavBar.css";
+import { useAuthState } from "react-firebase-hooks/auth";
+import auth from "../../../FireBase/Firebase";
+import { useState } from "react";
+import Swal from "sweetalert2";
+import { signOut } from "firebase/auth";
+import { FaUserCircle } from "react-icons/fa";
+
 const NavBar = () => {
-    return (
+  const [user] = useAuthState(auth);
+  const navigate = useNavigate();
+
+  const [isSignedIN, setIsSignedIn] = useState(false);
+
+  const handleUserDetails = () => {
+    setIsSignedIn(!isSignedIN);
+  };
+  const handleSignOut = () => {
+    signOut(auth);
+    setIsSignedIn(false);
+    navigate("/");
+    Swal.fire({
+      title: "Signed out",
+      icon: "info",
+    });
+  };
+  return (
+    <div>
+      <>
         <div>
-            <>
-            <div>
-            <div className="header">
+          <div className="header">
             <div className="logo">
-                {/* <img src={logo} alt="Logo" /> */}
-                <h1>HJ</h1>
+              <h1>HJ</h1>
             </div>
-                <div className="navBar">
-                    <ul>
-                        <NavLink to='/'>Home</NavLink>
-                        <NavLink to='/about'>About</NavLink>
-                        <NavLink to='/users'>Jobs</NavLink>
-                        <NavLink to='/resume'>Favorite</NavLink>
-                        <NavLink to='/contact'>Contact</NavLink>
-                        <NavLink to='/login'>SignIn</NavLink>
-                        <NavLink to='/signup'>SignUp</NavLink>
-                    </ul>
-                </div>
-           </div>
+            <div className="navBar">
+              <ul>
+                <NavLink to="/">Home</NavLink>
+                <NavLink to="/about">About</NavLink>
+                <NavLink to="/users">Jobs</NavLink>
+                <NavLink to="/resume">Favorite</NavLink>
+                <NavLink to="/contact">Contact</NavLink>
+                {user ? (
+                  <div onClick={handleUserDetails}>
+                    {user?.photoURL ? (
+                      <img src={user.photoURL} alt="" />
+                    ) : (
+                      <FaUserCircle size="30px" color="#fff"/>
+                    )}
+                  </div>
+                ) : (
+                  <NavLink to="/login">SignIn</NavLink>
+                )}
+              </ul>
             </div>
-        </>
+          </div>
+          {isSignedIN && (
+            <div style={{ position: "absolute", right: "0" }}>
+              <p>{user.displayName}</p>
+              <p>{user.email}</p>
+              <button onClick={handleSignOut}>Sign out</button>
+            </div>
+          )}
         </div>
-        // ==============================================================
-    );
+      </>
+    </div>
+  );
 };
 
 export default NavBar;

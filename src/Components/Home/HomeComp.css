@@ -24,7 +24,7 @@
     margin-right: 50px;
     margin-top: 30px;
     border-radius: 3%;
-    
+    animation: 1s moveFromBottom ease-out;
 }
 
 .hero-text {
@@ -39,13 +39,15 @@
     color: #17171d;
     margin-bottom: 30px;
     font-family: 'Poppins', sans-serif;
+    animation: 1s moveFromRight ease-out;
 }
 
 .hero-text h1 span {
-    background-color: #1967D2;
+    background-color: #08b2d4af;
     color: #fff;
     padding: 0px 10px 0 10px ;
     border-radius: 10px;
+    animation: 1s moveFromRight ease-out;
 }
 
 .hero-text p {
@@ -53,21 +55,12 @@
     font-weight: 400;
     margin-bottom: 40px;
     color: #666666;
+    animation: 1s moveFromBottom ease-out;
 }
 
 .hero-text .btn {
     display: flex;
     gap: 25px;
-}
-
-.hero-text .btn-a button {
-    font-size: 18px;
-    padding: 8px 25px;
-    color: #fff;
-    border: none;
-    border-radius: 25px;
-    background-color: #8B66C9;
-    cursor: pointer;
 }
 
 .hero-text .btn-a button:hover {
@@ -83,4 +76,35 @@
     color: #fff;
     border-radius: 25px;
     cursor: pointer;
+}
+
+@keyframes moveFromBottom {
+    from{
+        transform: translateY(20rem);
+        opacity: 0; 
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1; 
+    }
+}
+
+@keyframes moveFromRight {
+    from{
+        transform: translateY(rem);
+        opacity: 0; 
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1; 
+    }
+}
+
+@keyframes scaleFromCenter {
+    from{
+        scale: 0;
+    }
+    to{
+        scale: 1;
+    }
 }

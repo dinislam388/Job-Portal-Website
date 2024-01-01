@@ -12,8 +12,8 @@ import SignUp from "../Components/SignUp/SignUp";
 
 const router = createBrowserRouter([
     {
-        path: "/",
         element: <App/>,
+        errorElement: <NotFound/>,
         children:[
             {
                 path: "/",
@@ -25,19 +25,11 @@ const router = createBrowserRouter([
             },
             {
               path: "/resume",
-              element: <NotFound/>
+              element: <h2>skjdfhlsdkjfhsdkjf</h2>
             },
             {
                 path: "/contact",
                 element: <Contact/>
-            },
-            {
-                path: "/login",
-                element: <Login/>
-            },
-            {
-                path: "/signup",
-                element: <SignUp/>
             },
             {
                 path: "/users",
@@ -54,9 +46,13 @@ const router = createBrowserRouter([
         ]
     },
     {
-        path: "*",
-        element: <NotFound/>
-    }
+        path: "/login",
+        element: <Login/>
+    },
+    {
+        path: "/signup",
+        element: <SignUp/>
+    },
 ])
 
 export default router
