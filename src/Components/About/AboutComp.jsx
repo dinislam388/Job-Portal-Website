@@ -5,28 +5,31 @@ const AboutComp = () => {
       <div>
         <div>
           <div className="aboutContainer">
-            <h1 className="text-4xl text-[#FF7501] mb-4">About Us</h1>
-            <h2 className="text-2xl mb-5">Welcome to React_Router_DOM!</h2>
+            <h1 className="aboutHeading">About Us!</h1>
             <p className="aboutP">
-              React Router DOM is a widely used library in the React ecosystem
-              for handling navigation and routing within single-page
-              applications (SPAs). SPAs aim to provide a seamless user
-              experience by dynamically updating content on the same page,
-              rather than navigating to entirely new pages. React Router DOM
-              accomplishes this by allowing developers to define and manage
-              different "routes" or views in their applications. <br />
-              At its core, React Router DOM introduces key components that make
-              it easier to implement client-side routing. The BrowserRouter
-              component serves as the root of the routing system and uses the
-              HTML5 history API to synchronize the application's UI with the
-              URL. It enables the creation of a virtual path structure, which
-              allows users to navigate between different views without a full
-              page reload. <br />
-              Routes are defined using the Route component, specifying the URL
-              path and the corresponding component to render when the path
-              matches the current location. The Link and NavLink components
-              create navigation links, facilitating seamless transitions between
-              different parts of the application.
+              About Us Are you passionate about connecting talents with
+              opportunities? At [Your Company Name], <br /> we are on a mission to
+              revolutionize the job search experience. As a dynamic and
+              innovative platform, <br /> we empower individuals to explore exciting
+              career possibilities tailored to their skills and 
+              aspirations. <br />
+
+              <h2 className="aboutHeading">Why Join Us?</h2>
+
+              ==> Inclusive Culture: We fostera inclusive and 
+              collaborative environment where diversity is celebrated. <br />
+              ==>  Impactful Work: Join a team dedicated to making a meaningful impact on
+              people's lives and careers. 
+              <br />
+              ==> Continuous: Embrace learning
+              and development opportunities enhance your skills advance th
+               career. 
+              <h2 className="aboutHeading">Current Openings: </h2>
+              
+              Explore our current job openings
+              and become part of a community that values growth, creativity, and <br />
+              excellence. Ready to embark on a rewarding journey? [Apply Now]
+              and let's shape the future of work together!
             </p>
           </div>
         </div>

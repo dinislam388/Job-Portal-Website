@@ -1,11 +1,15 @@
 .aboutContainer {
-  /* background-color: aqua;
-  z-index: -50; */
+  background-color:#CBDAF4;
+  width: 100%;
+  height: 70vh;
+  padding: 40px;
+  text-align: center;
+  /* z-index: -50; */
 }
 
 .aboutUs{
     max-width: 1000px;
-    height: 65vh;
+    height: 85vh;
     margin: auto;
     padding: 20px;
     text-align: center;
@@ -23,4 +27,11 @@
 .aboutP {
     font-size: 18px;
     color: #2D2D2D;
+  }
+
+  .aboutHeading {
+    color: #7761DC;
+    margin-top: px;
+    text-align: center;
+    padding: 10px;
   }
