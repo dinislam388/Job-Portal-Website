@@ -43,7 +43,7 @@ const NavBar = () => {
                 {user ? (
                   <div onClick={handleUserDetails}>
                     {user?.photoURL ? (
-                      <img src={user.photoURL} alt="" />
+                      <img className="userProfile" src={user.photoURL} alt="" />
                     ) : (
                       <FaUserCircle size="30px" color="#fff"/>
                     )}
@@ -55,10 +55,10 @@ const NavBar = () => {
             </div>
           </div>
           {isSignedIN && (
-            <div style={{ position: "absolute", right: "0" }}>
-              <p>{user.displayName}</p>
-              <p>{user.email}</p>
-              <button onClick={handleSignOut}>Sign out</button>
+            <div className="profileClickedInfo">
+              <h3 className="displayName">{user.displayName}</h3>
+              <p className="displayemail">{user.email}</p>
+              <button className="displaySignoutBtn" onClick={handleSignOut}>Sign out</button>
             </div>
           )}
         </div>

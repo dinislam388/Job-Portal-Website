@@ -55,15 +55,53 @@
   }
 
 .active {
-    background-color: rgb(110, 221, 255);
+    background-color: #7cd2ea;
     padding: 5px;
 
   }
 
+  .userProfile {
+    width: 35%;
+    border-radius: 50%; 
+     cursor: pointer;
+  }
 
+.profileClickedInfo {
+  background-color:#7cd2ea ;
+  position: absolute;
+  right: 0;
+  width: 18%;
+  height: 20vh;
+  text-align: center;
+  border-radius: 0px 0px 10px 10px;
+}
 
+.displayName {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  color: #26262f;
+}
 
+.displayemail {
+  margin-bottom: 8px;
+  color: #26262f;
+}
 
+.displaySignoutBtn {
+  background-color: #8572d9;
+  color: #fff;
+  border: none;  
+  margin-top: 8px;
+  padding: 5px 40px;
+  border-radius: 50px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all .3s ease-out;
+}
+
+.displaySignoutBtn:hover {
+  background-color:#7761DC;
+}
 
 @media (max-width: 768px) {
   .navbar {

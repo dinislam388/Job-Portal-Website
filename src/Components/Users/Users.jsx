@@ -8,8 +8,8 @@ const Users = () => {
         <>
             <div>
                 <div className="heading">
-                    <h1 className="text-4xl font-bold">All Job Post</h1>
-                    <h2 className="text-3xl font-semibold">Total Availavail Jobs: {users.length}</h2>
+                    <h1>All Job Post</h1>
+                    <h2>Total Availavail Jobs: {users.length}</h2>
                 </div>
                 <div className="card">
                     {
