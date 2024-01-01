@@ -11,7 +11,7 @@ const Users = () => {
                     <h1>All Job Post</h1>
                     <h2>Total Availavail Jobs: {users.length}</h2>
                 </div>
-                <div className="card">
+                <div className="jobCard">
                     {
                         users.map((user) => (
                         <User key={user.id}

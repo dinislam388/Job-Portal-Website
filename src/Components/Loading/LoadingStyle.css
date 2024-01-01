@@ -1,66 +1,293 @@
-.loadingContainer {
-    width: 100%;
-    height: 100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    background: #272727;
+.bg {
+	position: absolute;
+	width:100%;
+	height:100%;
+	background-color: #f1f1f1;
+	background-image: url(https://38.media.tumblr.com/b0599573cbde31e8f8ec2ce4f211bfc1/tumblr_naj3a897XB1st5lhmo1_1280.jpg);
+	background-size: cover;
+	background-position: left;
+	-webkit-transform: scale(1.1);
+	transform-origin: center;
+	-webkit-transform: scale(1.1);
+	transform-origin: center;
+	-webkit-filter: brightness(1.2) blur(15px);
+	filter: brightness(1.2) blur(15px);
 }
 
-  .container{
-    position: relative;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-  }
-  
-  .ring{
-    position:absolute;
-    height: 200px;
-    width: 200px;
-    border: 0px solid #272727;
-    border-radius:50%;
-  }
-  
-  .ring:nth-child(1){
-    border-bottom-width: 10px;
-    border-color: #ca2c92;
-    animation: rotate1 1.5s linear infinite;
-  }
-  
-  .ring:nth-child(2){
-    border-right-width: 10px;
-    border-color: #00ffff;
-    animation: rotate2 1.5s linear infinite;
-  }
-  
-  .ring:nth-child(3){
-    border-top-width: 10px;
-    border-color: #E0E722;
-    animation: rotate3 1.5s linear infinite;
-  }
-  
-  @keyframes rotate1{
-    0%{
-      transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg)
-    }
-    100%{
-      transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg)
-    }
-  }
-  @keyframes rotate2{
-    0%{
-      transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg)
-    }
-    100%{
-      transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg)
-    }
-  }
-  @keyframes rotate3{
-    0%{
-      transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg)
-    }
-    100%{
-      transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg)
-    }
-  }
+.content {
+	width:100%;
+	height:100%;
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+	position:absolute;
+}
+
+.text {
+	position:absolute;
+	top: 50%;
+	width: 100%;
+	margin-top: 70px;
+	text-align: center;
+	font-size: 24px;
+	font-family: 'Comfortaa', cursive, sans-serif;
+	letter-spacing: 1px;
+	color: #333333;
+}
+
+.circle {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	border-radius: 50%;
+	background: transparent;
+	z-index: 10;
+}
+
+span.dot {
+	position: absolute;
+	width: 16px;
+	height: 100%;
+	top: 0;
+	left: 50%;
+	margin-left: -8px;
+}
+
+span.dot:after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: block;
+	background: #333333;
+	width: 16px;
+	height: 16px;
+	-webkit-transform: scale(0.5);
+	transform: scale(0.5);
+	border-radius: 50%;
+}
+
+/* Angles */
+
+span.dot.no2 {
+	transform: rotate(36deg);
+	-webkit-transform: rotate(36deg);
+}
+
+span.dot.no3 {
+	transform: rotate(72deg);
+	-webkit-transform: rotate(72deg);
+}
+
+span.dot.no4 {
+	transform: rotate(108deg);
+	-webkit-transform: rotate(108deg);
+}
+
+span.dot.no5 {
+	transform: rotate(144deg);
+	-webkit-transform: rotate(144deg);
+}
+
+span.dot.no6 {
+	transform: rotate(180deg);
+	-webkit-transform: rotate(180deg);
+}
+
+span.dot.no7 {
+	transform: rotate(216deg);
+	-webkit-transform: rotate(216deg);
+}
+
+span.dot.no8 {
+	transform: rotate(252deg);
+	-webkit-transform: rotate(252deg);
+}
+
+span.dot.no9 {
+	transform: rotate(288deg);
+	-webkit-transform: rotate(288deg);
+}
+
+span.dot.no10 {
+	transform: rotate(324deg);
+	-webkit-transform: rotate(324deg);
+}
+
+/* Animation */
+
+.circle {
+	width: 100px;
+	height: 100px;
+	margin: -50px 0 0 -50px;
+	-webkit-animation: animatedEight 10s linear infinite;
+	animation: animatedEight 10s linear infinite;
+}
+
+	@-webkit-keyframes animatedEight {
+		from { -webkit-transform: rotate(15deg); }
+		to { -webkit-transform: rotate(-345deg); }
+	}
+	@keyframes animatedEight {
+		from { transform: rotate(15deg); }
+		to { transform: rotate(-345deg); }
+	}
+
+span.dot.no1:after {
+	-webkit-animation: animatedDotOne 2.5s ease-in-out infinite;
+	animation: animatedDotOne 2.5s ease-in-out infinite;
+}
+
+	@-webkit-keyframes animatedDotOne {
+		0%, 50%, 100% { -webkit-transform: scale(0.5); }
+		20%, 30% { -webkit-transform: scale(1); background: #7acade; }
+	}
+	@keyframes animatedDotOne {
+		0%, 50%, 100% { transform: scale(0.5); }
+		20%, 30% { transform: scale(1); background: #7acade; }
+	}
+
+span.dot.no2:after {
+	-webkit-animation: animatedDotTwo 2.5s ease-in-out infinite;
+	animation: animatedDotTwo 2.5s ease-in-out infinite;
+	-webkit-animation-delay: 0.25s; 
+	animation-delay: 0.25s; 
+}
+
+	@-webkit-keyframes animatedDotTwo {
+		0%, 50%, 100% { -webkit-transform: scale(0.5); }
+		20%, 30% { -webkit-transform: scale(1); background: #7acade; }
+	}
+	@keyframes animatedDotTwo {
+		0%, 50%, 100% { transform: scale(0.5); }
+		20%, 30% { transform: scale(1); background: #7acade; }
+	}
+
+span.dot.no3:after {
+	-webkit-animation: animatedDotThree 2.5s ease-in-out infinite;
+	animation: animatedDotThree 2.5s ease-in-out infinite;
+	-webkit-animation-delay: 0.5s;
+	animation-delay: 0.5s;
+}
+
+	@-webkit-keyframes animatedDotThree {
+		0%, 50%, 100% { -webkit-transform: scale(0.5); }
+		20%, 30% { -webkit-transform: scale(1); background: #7acade; }
+	}
+	@keyframes animatedDotThree {
+		0%, 50%, 100% { transform: scale(0.5); }
+		20%, 30% { transform: scale(1); background: #7acade; }
+	}
+
+span.dot.no4:after {
+	-webkit-animation: animatedDotFour 2.5s ease-in-out infinite;
+	animation: animatedDotFour 2.5s ease-in-out infinite;
+	-webkit-animation-delay: 0.75s;
+	animation-delay: 0.75s;
+}
+
+	@-webkit-keyframes animatedDotFour {
+		0%, 50%, 100% { -webkit-transform: scale(0.5); }
+		20%, 30% { -webkit-transform: scale(1); background: #7acade; }
+	}
+	@keyframes animatedDotFour {
+		0%, 50%, 100% { transform: scale(0.5); }
+		20%, 30% { transform: scale(1); background: #7acade; }
+	}
+
+span.dot.no5:after {
+	-webkit-animation: animatedDotFive 2.5s ease-in-out infinite;
+	animation: animatedDotFive 2.5s ease-in-out infinite;
+	-webkit-animation-delay: 1s;
+	animation-delay: 1s;
+}
+
+	@-webkit-keyframes animatedDotFive {
+		0%, 50%, 100% { -webkit-transform: scale(0.5); }
+		20%, 30% { -webkit-transform: scale(1); background: #7acade; }
+	}
+	@keyframes animatedDotFive {
+		0%, 50%, 100% { transform: scale(0.5); }
+		20%, 30% { transform: scale(1); background: #7acade; }
+	}
+
+span.dot.no6:after {
+	-webkit-animation: animatedDotSix 2.5s ease-in-out infinite;
+	animation: animatedDotSix 2.5s ease-in-out infinite;
+	-webkit-animation-delay: 1.25s;
+	animation-delay: 1.25s;
+}
+
+	@-webkit-keyframes animatedDotSix {
+		0%, 50%, 100% { -webkit-transform: scale(0.5); }
+		20%, 30% { -webkit-transform: scale(1); background: #7acade; }
+	}
+	@keyframes animatedDotSix {
+		0%, 50%, 100% { transform: scale(0.5); }
+		20%, 30% { transform: scale(1); background: #7acade; }
+	}
+
+span.dot.no7:after {
+	-webkit-animation: animatedDotSeven 2.5s ease-in-out infinite;
+	animation: animatedDotSeven 2.5s ease-in-out infinite;
+	-webkit-animation-delay: 1.5s;
+	animation-delay: 1.5s;
+}
+
+	@-webkit-keyframes animatedDotSeven {
+		0%, 50%, 100% { -webkit-transform: scale(0.5); }
+		20%, 30% { -webkit-transform: scale(1); background: #7acade; }
+	}
+	@keyframes animatedDotSeven {
+		0%, 50%, 100% { transform: scale(0.5); }
+		20%, 30% { transform: scale(1); background: #7acade; }
+	}
+
+span.dot.no8:after {
+	-webkit-animation: animatedDotEight 2.5s ease-in-out infinite;
+	animation: animatedDotEight 2.5s ease-in-out infinite;
+	-webkit-animation-delay: 1.75s;
+	animation-delay: 1.75s;
+}
+
+	@-webkit-keyframes animatedDotEight {
+		0%, 50%, 100% { -webkit-transform: scale(0.5); }
+		20%, 30% { -webkit-transform: scale(1); background: #7acade; }
+	}
+	@keyframes animatedDotEight {
+		0%, 50%, 100% { transform: scale(0.5); }
+		20%, 30% { transform: scale(1); background: #7acade; }
+	}
+
+span.dot.no9:after {
+	-webkit-animation: animatedDotNine 2.5s ease-in-out infinite;
+	animation: animatedDotNine 2.5s ease-in-out infinite;
+	-webkit-animation-delay: 2s;
+	animation-delay: 2s;
+}
+
+	@-webkit-keyframes animatedDotNine {
+		0%, 50%, 100% { -webkit-transform: scale(0.5); }
+		20%, 30% { -webkit-transform: scale(1); background: #7acade; }
+	}
+	@keyframes animatedDotNine {
+		0%, 50%, 100% { transform: scale(0.5); }
+		20%, 30% { transform: scale(1); background: #7acade; }
+	}
+
+span.dot.no10:after {
+	-webkit-animation: animatedDotTen 2.5s ease-in-out infinite;
+	animation: animatedDotTen 2.5s ease-in-out infinite;
+	-webkit-animation-delay: 2.25s;
+	animation-delay: 2.25s;
+}
+
+	@-webkit-keyframes animatedDotTen {
+		0%, 50%, 100% { -webkit-transform: scale(0.5); }
+		20%, 30% { -webkit-transform: scale(1); background: #7acade; }
+	}
+	@keyframes animatedDotTen {
+		0%, 50%, 100% { transform: scale(0.5); }
+		20%, 30% { transform: scale(1); background: #7acade; }
+	}

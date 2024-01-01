@@ -8,7 +8,7 @@
 
 .fullBody {
     width: 100%;
-    height: 100vh;
+    height: 230vh;
     
     background-color: #cbdaf4;
 }
@@ -24,7 +24,7 @@
     margin-right: 50px;
     margin-top: 30px;
     border-radius: 3%;
-    animation: 1s moveFromBottom ease-out;
+    animation: 1s moveFromRight ease-out;
 }
 
 .hero-text {
@@ -39,7 +39,7 @@
     color: #17171d;
     margin-bottom: 30px;
     font-family: 'Poppins', sans-serif;
-    animation: 1s moveFromRight ease-out;
+    animation: 1s moveFromLeft ease-out;
 }
 
 .hero-text h1 span {
@@ -47,7 +47,6 @@
     color: #fff;
     padding: 0px 10px 0 10px ;
     border-radius: 10px;
-    animation: 1s moveFromRight ease-out;
 }
 
 .hero-text p {
@@ -55,17 +54,7 @@
     font-weight: 400;
     margin-bottom: 40px;
     color: #666666;
-    animation: 1s moveFromBottom ease-out;
-}
-
-.hero-text .btn {
-    display: flex;
-    gap: 25px;
-}
-
-.hero-text .btn-a button:hover {
-    background-color: #FD7100;
-    transition: all .3s ease-out;
+    animation: 1s moveFromLeft ease-out;
 }
 
 .hero-text .btn .btn-b button {
@@ -73,14 +62,153 @@
     padding: 7px 20px;
     border: 2px solid #8B66C9;
     background: none;
-    color: #fff;
+    color:#1e1e26;
     border-radius: 25px;
     cursor: pointer;
+    animation: 1s moveFromLeft ease-out;
+    transition: all .2s ease-in-out;
 }
 
-@keyframes moveFromBottom {
+.hero-text .btn .btn-b button:hover {
+    background-color: #8B66C9;
+    color: #fff;
+}
+
+/* ==============> Explore <=================== */
+
+
+.Exploreheading {
+    background-color: #d0ddf4;
+    text-align: center;
+    color: #2d2d2d;
+    padding: 20px;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 4rem;
+    background-color: #CBDAF4;
+}
+
+/* =============>> Card <<=================== */
+
+.cardsContainer {
+    width: 1200px !important;
+    padding: 0 !important;
+    margin-right: auto;
+    margin-left: auto;
+  
+    @media screen and (min-width: 992px) and (max-width: 1439px) {
+      max-width: 1279px !important;
+      padding: 0 !important;
+      margin: 0 80px !important;
+      width: auto !important;
+    }
+  
+    @media screen and (max-width: 991px) {
+      max-width: 959px !important;
+      margin: 0 16px !important;
+      padding: 0 !important;
+      width: auto !important;
+    }
+  }
+  
+  .gradient-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    padding: 30px;
+    @media screen and (max-width: 991px) {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  .container-title {
+    text-align: center;
+    padding: 0 !important;
+    margin-bottom: 40px;
+    font-size: 40px;
+    color: #ffffff;
+    font-weight: 600;
+    line-height: 60px;
+  }
+  
+  .card {
+    max-width: 550px;
+    border: 0;
+    /* width: 100%; */
+    margin-inline: auto;
+  }
+  
+  .container-card {
+    position: relative;
+    border: 2px solid transparent;
+    background: linear-gradient(71deg, #150e18, #2a272c, #180f1b);
+    background-clip: padding-box;
+    border-radius: 45px;
+    padding: 40px;
+    img {
+      margin-bottom: 32px;
+    }
+  }
+  
+  .bg-green-box,
+  .bg-white-box,
+  .bg-yellow-box,
+  .bg-blue-box {
+    position: relative;
+  }
+  
+  .bg-green-box::after,
+  .bg-white-box::after,
+  .bg-yellow-box::after,
+  .bg-blue-box::after {
+    position: absolute;
+    top: -1px;
+    bottom: -1px;
+    left: -1px;
+    right: -1px;
+    content: "";
+    z-index: -1;
+    border-radius: 45px;
+  }
+  
+  .bg-green-box::after {
+    background: linear-gradient(71deg, #0d1212, #3da077, #0d1212);
+  }
+  
+  .bg-white-box::after {
+    background: linear-gradient(71deg, #121013, #b0afb0, #121013);
+  }
+  
+  .bg-yellow-box::after {
+    background: linear-gradient(71deg, #110e0e, #afa220, #110e0e);
+  }
+  
+  .bg-blue-box::after {
+    background: linear-gradient(71deg, #0c0a0e, #5f6fad, #0c0a0e);
+  }
+  
+  .card-title {
+    font-weight: 600;
+    color: white;
+    letter-spacing: -0.02em;
+    line-height: 40px;
+    font-style: normal;
+    font-size: 28px;
+    padding-bottom: 8px;
+  }
+  
+  .card-description {
+    font-weight: 600;
+    line-height: 32px;
+    color: hsla(0, 0%, 100%, 0.5);
+    font-size: 16px;
+    max-width: 470px;
+  }
+
+
+/* ================================== */
+@keyframes moveFromLeft {
     from{
-        transform: translateY(20rem);
+        transform: translateX(-20rem);
         opacity: 0; 
     }
     to{
@@ -89,9 +217,13 @@
     }
 }
 
+
+
+
+
 @keyframes moveFromRight {
     from{
-        transform: translateY(rem);
+        transform: translateX(20rem);
         opacity: 0; 
     }
     to{

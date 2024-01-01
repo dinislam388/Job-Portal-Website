@@ -8,7 +8,7 @@ const AboutComp = () => {
             <h1 className="aboutHeading">About Us!</h1>
             <p className="aboutP">
               About Us Are you passionate about connecting talents with
-              opportunities? At [Your Company Name], <br /> we are on a mission to
+              opportunities? At [Project Name Halal JIbika], <br /> we are on a mission to
               revolutionize the job search experience. As a dynamic and
               innovative platform, <br /> we empower individuals to explore exciting
               career possibilities tailored to their skills and 
@@ -17,8 +17,8 @@ const AboutComp = () => {
               <h2 className="aboutHeading">Why Join Us?</h2>
 
               ==> Inclusive Culture: We fostera inclusive and 
-              collaborative environment where diversity is celebrated. <br />
-              ==>  Impactful Work: Join a team dedicated to making a meaningful impact on
+              collaborative environment where to diversity is celebrated. <br />
+              ==>  Impactful Work: Join a team dedicated to making a meaningful impact on 
               people's lives and careers. 
               <br />
               ==> Continuous: Embrace learning

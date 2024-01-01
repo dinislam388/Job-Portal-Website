@@ -4,7 +4,7 @@ const User = ({ user }) => {
   const { id, logo, companyName, position, title, description } = user;
   return (
     <>
-      <div className="cards">
+      <div className="jobCards">
         <div className="jobLogo">
           <img src={logo} alt="" />
         </div>

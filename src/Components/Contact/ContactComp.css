@@ -5,13 +5,14 @@
 }
 
 .conatiner {
-    height: 110vh;
+    height: 112vh;
     max-width: 1440px;
     padding: 2rem;
     text-align: center;
     align-items: center;
     justify-content: center;
-
+    font-family: 'Poppins', sans-serif;
+    background-color: #CBDAF4;
 }
 
 /* .contactHeading {
@@ -31,20 +32,20 @@
     border-right: none;
     /* border-bottom: 1px solid blue; */
     outline: none;
-    font-size: 16px;
-    color: red;
+    font-size: 17px;
+    color: rgb(23, 23, 23);
     width: 90%;
 }
 
 .inputBorder {
     /* border: 1px solid blue; */
-    background-color: #dbdbdb;
+    background-color: #d4def0;
     border: 1px solid black;
     box-shadow: 0px 0px 25px -5px inset;
     padding: 30px;
     width: 40%;
     border-radius: 10px;
-    height: 95vh;
+    height: 100vh;
     margin: auto;
 }
 

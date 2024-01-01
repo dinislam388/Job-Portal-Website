@@ -1,7 +1,7 @@
 :root {
     --footer-bg: #1c2444;
-    --color: #f2f3fb;
-    --color-smooth: #9da2ae;
+    --color: black;
+    --color-smooth: rgb(59, 58, 58);
     --input-border: #3a456a;
     --btn-bg-color: #f1f2fc;
     --btn-hover-bg: #d5d9f6;
@@ -10,7 +10,7 @@
   
   footer {
     font-size: 16px;
-    background-color: #151515;
+    background-color: #899cbd;
     padding: 2em 4em;
     display: flex;
     align-items: start;

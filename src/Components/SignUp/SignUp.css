@@ -29,13 +29,13 @@
     padding-bottom: 2.5rem;  */
     justify-content: center; 
     align-items: center; 
-    background-color: #fff; 
+    background-color: #CBDAF4;
     /* background-color:red; */
 }
 
 .signUpFullForm {
     width: 35%;
-    background-color: #dbdbdb;
+    background-color: #d4def0;
     border: 1px solid black;
     box-shadow: 0px 0px 25px -5px inset;
     padding: 30px;
@@ -52,7 +52,7 @@
     border-radius: 5px;
     border: none;
     width: 100%;
-
+    outline: none;
 }
 
 .btDiv {
