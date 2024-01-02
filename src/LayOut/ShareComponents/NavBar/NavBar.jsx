@@ -59,6 +59,7 @@ const NavBar = () => {
               <h3 className="displayName">{user.displayName}</h3>
               <p className="displayemail">{user.email}</p>
               <button className="displaySignoutBtn" onClick={handleSignOut}>Sign out</button>
+              
             </div>
           )}
         </div>

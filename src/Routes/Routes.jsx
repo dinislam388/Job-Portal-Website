@@ -9,6 +9,7 @@ import SeeDetails from "../Components/SeeDetails/SeeDetails";
 import Home from "../Components/Home/HomeComp";
 import SignUp from "../Components/SignUp/SignUp";
 import PrivateRoute from "./PrivateRoute";
+import FavoritePage from "../Pages/Favorite/FavoritePage";
 
 const router = createBrowserRouter([
   {
@@ -25,7 +26,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/resume",
-        element: <h2>skjdfhlsdkjfhsdkjf</h2>,
+        element: <FavoritePage/>
       },
       {
         path: "/contact",

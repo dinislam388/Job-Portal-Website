@@ -105,7 +105,7 @@ const HomeComp = () => {
                       </radialGradient>
                     </defs>
                   </svg>
-                  <p className="card-title">Fresher Developer</p>
+                  <p className="card-title">Intern Developer</p>
                   <p className="card-description">
                   As a Senior Developer, you'll play a crucial role in shaping our cutting-edge projects and leading a team of talented professionals.
                   </p>

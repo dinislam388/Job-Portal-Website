@@ -21,6 +21,10 @@
     padding: 35px;
 }
 
+.jobLogo img {
+    width: 15%;
+}
+
 .jobLogo {
     display: flex;
     justify-content: space-between;
@@ -33,11 +37,13 @@
     cursor: pointer;
     margin-top: 2px;
     margin-right: 5px;
+    /* background-color: red; */
+    margin-bottom: 30px;
 }
 
-.jobLogo img {
-    width: 15%;
-}
+/* .jobCrad:first-child:hover {
+    color: #0866ff;
+} */
 
 .jobCards {
     background-color: #e6eaf2;
