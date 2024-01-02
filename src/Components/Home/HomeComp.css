@@ -95,6 +95,42 @@
     color: #fff;
 }
 
+
+/* Home Page Animation */
+
+@keyframes moveFromLeft {
+  from{
+      transform: translateX(-20rem);
+      opacity: 0; 
+  }
+  to{
+      transform: translateX(0);
+      opacity: 1; 
+  }
+}
+
+@keyframes moveFromRight {
+  from{
+      transform: translateX(20rem);
+      opacity: 0; 
+  }
+  to{
+      transform: translateX(0);
+      opacity: 1; 
+  }
+}
+
+@keyframes scaleFromCenter {
+  from{
+      scale: 0;
+  }
+  to{
+      scale: 1;
+  }
+}
+
+/* =======> Home Page Animation Delete <======== */
+
 /* ==============> Explore <=================== */
 
 
@@ -278,37 +314,3 @@
 
 
 /* ================================== */
-@keyframes moveFromLeft {
-    from{
-        transform: translateX(-20rem);
-        opacity: 0; 
-    }
-    to{
-        transform: translateX(0);
-        opacity: 1; 
-    }
-}
-
-
-
-/* Home Animation */
-
-@keyframes moveFromRight {
-    from{
-        transform: translateX(20rem);
-        opacity: 0; 
-    }
-    to{
-        transform: translateX(0);
-        opacity: 1; 
-    }
-}
-
-@keyframes scaleFromCenter {
-    from{
-        scale: 0;
-    }
-    to{
-        scale: 1;
-    }
-}
