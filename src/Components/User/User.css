@@ -19,7 +19,20 @@
     gap: 20px;
     background-color: #D0DDF4;
     padding: 35px;
-    
+}
+
+.jobLogo {
+    display: flex;
+    justify-content: space-between;
+}
+
+.jobCrad {
+    display: flex;
+    gap: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    margin-top: 2px;
+    margin-right: 5px;
 }
 
 .jobLogo img {
@@ -66,7 +79,7 @@
 
 
 
-.cards:hover {
+.jobCards:hover {
     /* transform: translateY(-5px) scale(1.005) translateZ(0);
     box-shadow: 0 24px 36px rgba(0,0,0,0.11),
     0 24px 46px var(--box-shadow-color);  */
@@ -76,13 +89,16 @@
 
 .dtailsBtn button {
     border: none;
-    padding: .5rem 3rem;
+    padding: .5rem 1.5rem;
     border-radius: 2rem;
     cursor: pointer;
+    margin-top: 3px;
+    margin-left: 22px;
     transition: all .2s ease-out;
     background-color: #cad9dd;
-    font-size: 15px;
-    width: 100%;
+    font-size: 15.5px;
+    width: 40%;
+    /* font-family: 'Poppins', sans-serif; */
 }
 
 .dtailsBtn button:hover {
@@ -96,13 +112,13 @@
 /* } */
 
 @media(max-width:840px) {
-    .card {
+    .jobCard {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media(max-width: 567px){
-    .card {
+    .jobCard {
         grid-template-columns: auto;
     }
 }

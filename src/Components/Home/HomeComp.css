@@ -8,7 +8,7 @@
 
 .fullBody {
     width: 100%;
-    height: 230vh;
+    height: 205vh;
     
     background-color: #cbdaf4;
 }
@@ -57,7 +57,7 @@
     animation: 1s moveFromLeft ease-out;
 }
 
-.hero-text .btn .btn-b button {
+.btn-b button {
     font-size: 18px;
     padding: 7px 20px;
     border: 2px solid #8B66C9;
@@ -69,7 +69,28 @@
     transition: all .2s ease-in-out;
 }
 
-.hero-text .btn .btn-b button:hover {
+.btn-b button:hover {
+    background-color: #8B66C9;
+    color: #fff;
+}
+
+.ebtn-b {
+    text-align: center;
+}
+
+.ebtn-b button {
+    font-size: 18px;
+    padding: 7px 20px;
+    border: 2px solid #8B66C9;
+    background: none;
+    color:#1e1e26;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 30px;
+    transition: all .2s ease-in-out;
+}
+
+.ebtn-b button:hover {
     background-color: #8B66C9;
     color: #fff;
 }
@@ -85,6 +106,14 @@
     font-family: 'Poppins', sans-serif;
     margin-top: 4rem;
     background-color: #CBDAF4;
+    font-size: 18px;
+}
+
+.Exploreheading h1 {
+    border-bottom: 2px solid #2D2D2D;
+    width: 31%;
+    margin: auto;
+    margin-bottom: 20px;
 }
 
 /* =============>> Card <<=================== */
@@ -112,7 +141,7 @@
   
   .gradient-cards {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 32px;
     padding: 30px;
     @media screen and (max-width: 991px) {
