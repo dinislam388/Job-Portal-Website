@@ -4,38 +4,64 @@ import { MdFavoriteBorder } from "react-icons/md";
 import { MdAddCircle } from "react-icons/md";
 import { FaRegEdit } from "react-icons/fa";
 import { RiDeleteBin5Line } from "react-icons/ri";
+import { useState } from "react";
+import axios from "axios";
+import { useLoaderData } from "react-router-dom";
 
-const User = ({ user }) => {
-  const { id, logo, companyName, position, title, description } = user;
+
+const User = () => {
+  const usersData = useLoaderData()
+  const [users, setUsers] = useState(usersData);
+  
+  // ===========> Delete Job Post <============
+
+  // useEffect(() => {
+  //   console.log(users);
+  // }, [])
+
+  const handleDeleteJob = async (userid) => {
+    try {
+      await axios.delete(`http://localhost:9000/jobs/${userid}`);
+      setUsers(users?.filter((data) => data.id !== userid));
+    } catch (error) {
+      console.error("Error:", error);
+      // Handle errors
+    }
+  };
+  // =============> End Delete Functionality <==================>>
+
   return (
     <>
-      <div className="jobCards">
-        <div className="jobLogo">
-          <img src={logo} alt="" />
-            <div className="jobCrad">
-              <MdFavoriteBorder />
-              <MdAddCircle/>
-              <FaRegEdit />
-              <RiDeleteBin5Line />
+      {users &&
+        users?.map((user) => (
+          <div className="jobCards" key={user.id}>
+            <div className="jobLogo">
+              <img src={user.logo} alt="" />
+              <div className="jobCrad">
+                <MdFavoriteBorder />
+                <MdAddCircle />
+                <FaRegEdit />
+                <RiDeleteBin5Line
+                  className="deleteBtn"
+                  onClick={() => handleDeleteJob(user.id)}
+                />
+              </div>
             </div>
-        </div>
-        <h3 className="companyName">{companyName}</h3>
-        <h2 className="jobPosition">{position}</h2>
-        <h4 className="jobTitle">{title}</h4>
-        <div className="cardBtn">
-          <Link className="dtailsBtn" to={`/users/${id}`}>
-            <button>See Details</button>
-          </Link>
 
-          <Link className="dtailsBtn" to={`/users/${id}`}>
-            <button>Apply Now</button>
-          </Link>
-        </div>
-      </div>
+            <h3 className="companyName">{user.companyName}</h3>
+            <h2 className="jobPosition">{user.position}</h2>
+            <h4 className="jobTitle">{user.title}</h4>
+            <div className="cardBtn">
+              <Link className="dtailsBtn" to={`/users/${user.id}`}>
+                <button>See Details</button>
+              </Link>
 
-      {/* <Link to={`/users/${id}`}>
-        <button>User Details</button>
-      </Link> */}
+              <Link className="dtailsBtn" to={`/users/${user.id}`}>
+                <button>Apply Now</button>
+              </Link>
+            </div>
+          </div>
+        ))}
     </>
   );
 };

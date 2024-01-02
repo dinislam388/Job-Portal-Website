@@ -41,9 +41,9 @@
     margin-bottom: 30px;
 }
 
-/* .jobCrad:first-child:hover {
-    color: #0866ff;
-} */
+.deleteBtn:hover {
+    color: red;
+}
 
 .jobCards {
     background-color: #e6eaf2;

@@ -116,6 +116,49 @@
     margin-bottom: 20px;
 }
 
+/* Home Page Responsive */
+
+/* * Media query for smaller screens (max-width: 768px) */ 
+@media only screen and (max-width: 768px) {
+    .hero-area {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .hero-img img {
+        width: 100%;
+        height: auto;
+        margin: 0;
+        border-radius: 0;
+    }
+
+    .hero-text {
+        margin-left: 0;
+        margin-top: 30px;
+    }
+
+    .hero-text h1 {
+        font-size: 36px;
+        line-height: 50px;
+        margin-bottom: 20px;
+    }
+
+    .btn-b button,
+    .ebtn-b button {
+        margin-top: 20px;
+    }
+}
+
+/* Media query for smaller screens (max-width: 768px) */
+@media only screen and (max-width: 1024px) {
+  .hero-img img {
+      width: 100%;
+      height: auto;
+      margin: 0;
+      border-radius: 0;
+  }
+}
+
 /* =============>> Card <<=================== */
 
 .cardsContainer {
@@ -248,7 +291,7 @@
 
 
 
-
+/* Home Animation */
 
 @keyframes moveFromRight {
     from{

@@ -1,10 +1,16 @@
 import "./PersonalProfile.css"
-const PersonalProfile = () => {
-    return (
-        <div>
-            <h1>This is Personal Profile</h1>
-        </div>
-    );
-};
+const PersonalProfile = (user) => {
+    const {photoURL, displayName, email, lastRefreshAt, lastSignInTime, creationTime,emailVerified } = user
+    console.log(user);
+  return (
+    <>
+    <div className="personalContainer">
+        <h1 className="yourProfileText">Your Profile</h1>
+        {/* <h1>h</h1> */}
+        {/* <img src={user.photoURL} alt="" /> */}
+    </div>
+    </>
+  )
+}
 
-export default PersonalProfile;
+export default PersonalProfile

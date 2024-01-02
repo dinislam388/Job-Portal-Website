@@ -1,4 +1,4 @@
-import { NavLink, useNavigate } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import "./NavBar.css";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../../FireBase/Firebase";
@@ -6,12 +6,15 @@ import { useState } from "react";
 import Swal from "sweetalert2";
 import { signOut } from "firebase/auth";
 import { FaUserCircle } from "react-icons/fa";
+import PersonalProfile from "../../../Components/PersonalProfile/PersonalProfile";
 
 const NavBar = () => {
   const [user] = useAuthState(auth);
   const navigate = useNavigate();
 
   const [isSignedIN, setIsSignedIn] = useState(false);
+
+  const [isInfo, setIsInfo] = useState(false)
 
   const handleUserDetails = () => {
     setIsSignedIn(!isSignedIN);
@@ -25,8 +28,10 @@ const NavBar = () => {
       icon: "info",
     });
   };
+  // console.log(user);
   return (
     <div>
+      
       <>
         <div>
           <div className="header">
@@ -50,18 +55,29 @@ const NavBar = () => {
                   </div>
                 ) : (
                   <NavLink to="/login">SignIn</NavLink>
-                )}
+                  )}
               </ul>
-            </div>
+            </div>  
           </div>
           {isSignedIN && (
             <div className="profileClickedInfo">
+              <img className="profilePicClick" src={user.photoURL} alt="" />
               <h3 className="displayName">{user.displayName}</h3>
               <p className="displayemail">{user.email}</p>
-              <button className="displaySignoutBtn" onClick={handleSignOut}>Sign out</button>
               
+              
+              {/* <PersonalProfile user = {user}/> */}
+
+              
+              <button className="displaySignoutBtn" onClick={() => navigate("/personalprofile")}>More Info...</button>
+              
+
+              <button className="displaySignoutBtn" onClick={handleSignOut}>Sign out</button>
             </div>
           )}
+          {/* <button className="displaySignoutBtn" >SEE MORE...</button> */}
+                
+              
         </div>
       </>
     </div>

@@ -10,6 +10,7 @@ import Home from "../Components/Home/HomeComp";
 import SignUp from "../Components/SignUp/SignUp";
 import PrivateRoute from "./PrivateRoute";
 import FavoritePage from "../Pages/Favorite/FavoritePage";
+import PersonalProfile from "../Components/PersonalProfile/PersonalProfile";
 
 const router = createBrowserRouter([
   {
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
       {
         path: "/contact",
         element: <Contact />,
+      },
+      {
+        path: "/personalprofile",
+        element: <PersonalProfile/>,
       },
       {
         path: "/users",
