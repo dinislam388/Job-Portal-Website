@@ -1,54 +1,7 @@
-import { useState } from "react";
-import "./AddJobs.css";
-import addJobLogo from "./add job.png";
-import axios from "axios";
-import { Form, Link, useNavigate } from "react-router-dom";
-import Swal from "sweetalert2";
-const AddJobs = () => {
-  const navigate = useNavigate();
-  const URL = "http://localhost:9000/jobs";
-
-  const [jobData, setJobData] = useState({
-    title: "",
-    logo: "",
-    companyName: "",
-    position: "",
-    description: "",
-  });
-
-  const handleChangeForm = (e) => {
-    const { name, value } = e.target;
-    setJobData({
-      ...jobData,
-      [e.target.name]: e.target.value,
-    });
-  };
-
-  const handleInputFild = (e) => {
-    e.preventDefault();
-    if (
-      jobData.title.trim() === "" ||
-      jobData.logo.trim() === "" ||
-      jobData.companyName.trim() === "" ||
-      jobData.position.trim() === "" ||
-      jobData.description.trim()
-    ) {
-      Swal.fire({
-        title: "Job Add Successfully",
-        icon: "success",
-      });
-      navigate("/users");
-    } else {
-      Swal.fire({
-        title: "Add Valid Job Info",
-        icon: "warning",
-      });
-    }
-    axios.post(URL, jobData).then((response) => {
-      setJobData(response.data);
-    });
-  };
-
+// import addJobLogo from "./add job.png";
+import { Form } from "react-router-dom";
+import editeLogo from "./edite icon (2).png"
+const EditeJobs = () => {
   return (
     <div>
       <div className="AddJobConatiner">
@@ -57,9 +10,9 @@ const AddJobs = () => {
             <div className="inputFild">
               <div className="inputBoxArea">
                 <div>
-                  <img className="conatctImg" src={addJobLogo} alt="" />
+                  <img className="conatctImg" src={editeLogo} alt="" />
                 </div>
-                <h1 className="contactHeading">Add Jobs</h1>
+                <h1 className="contactHeading">Edite Job</h1>
                 <input
                   name="title"
                   required
@@ -97,7 +50,7 @@ const AddJobs = () => {
                 <br />
                 {/* <Link to="/users"> */}
                 <button navigate="/users" type="submit" className="submitBtn">
-                  Add Job
+                  Update Job
                 </button>
                 {/* </Link> */}
               </div>
@@ -109,4 +62,4 @@ const AddJobs = () => {
   );
 };
 
-export default AddJobs;
+export default EditeJobs;

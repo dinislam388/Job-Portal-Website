@@ -7,17 +7,15 @@ import { RiDeleteBin5Line } from "react-icons/ri";
 import { useState } from "react";
 import axios from "axios";
 import { useLoaderData } from "react-router-dom";
+// import { data } from "autoprefixer";
 
 
 const User = () => {
   const usersData = useLoaderData()
   const [users, setUsers] = useState(usersData);
+  const [favorite, setFavorite] = useState(usersData)
   
   // ===========> Delete Job Post <============
-
-  // useEffect(() => {
-  //   console.log(users);
-  // }, [])
 
   const handleDeleteJob = async (userid) => {
     try {
@@ -30,6 +28,21 @@ const User = () => {
   };
   // =============> End Delete Functionality <==================>>
 
+  // =============> Favorite Jobs <==============
+
+  // const handleFavoriteJob = async(userid) => {
+  //   try {
+  //     await axios.favorite(`http://localhost:9000/jobs/${userid}`)
+  //     setFavorite(users?.filter((data) => data.id !== userid))
+  //   } catch (error) {
+  //     console.error("Error:", error);
+  //   }
+  // }
+
+
+  // =============> Add Favorite End <==============
+
+
   return (
     <>
       {users &&
@@ -38,9 +51,17 @@ const User = () => {
             <div className="jobLogo">
               <img src={user.logo} alt="" />
               <div className="jobCrad">
+
                 <MdFavoriteBorder />
-                <MdAddCircle />
-                <FaRegEdit />
+
+                <Link to="/addjobs">
+                  <MdAddCircle className="addbtn" />
+                </Link>
+
+                <Link to="/editejob">
+                <FaRegEdit className="addbtn" />
+                </Link>
+
                 <RiDeleteBin5Line
                   className="deleteBtn"
                   onClick={() => handleDeleteJob(user.id)}
@@ -56,7 +77,7 @@ const User = () => {
                 <button>See Details</button>
               </Link>
 
-              <Link className="dtailsBtn" to={`/users/${user.id}`}>
+              <Link className="dtailsBtn" to="/appyform">
                 <button>Apply Now</button>
               </Link>
             </div>

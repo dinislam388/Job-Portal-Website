@@ -74,9 +74,7 @@ const NavBar = () => {
 
               <button className="displaySignoutBtn" onClick={handleSignOut}>Sign out</button>
             </div>
-          )}
-          {/* <button className="displaySignoutBtn" >SEE MORE...</button> */}
-                
+          )}                
               
         </div>
       </>

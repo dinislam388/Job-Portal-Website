@@ -4,11 +4,15 @@ import GoogleGithubAuth from "../withGoogleGithub/GoogleGithubAuth";
 import auth from "../../FireBase/Firebase";
 import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import Swal from "sweetalert2";
+import Loading from "../Loading/Loading";
 const LogIn = () => {
   const [signInWithEmailAndPassword, user, loading, error] =
     useSignInWithEmailAndPassword(auth);
     const navigate = useNavigate();
 
+    if (loading) {
+      <Loading/>
+    }
     if(error){
       return Swal.fire({
         title: "Invalid information",
@@ -85,7 +89,6 @@ const LogIn = () => {
                       stroke-width="2"
                       stroke-linecap="round"
                       stroke-linejoin="round"
-                      class="ml-2"
                     >
                       <line x1="5" y1="12" x2="19" y2="12"></line>
                       <polyline points="12 5 19 12 12 19"></polyline>

@@ -45,6 +45,14 @@
     color: red;
 }
 
+.addbtn {
+    color: #000000;
+}
+
+.addbtn:hover {
+    color: #561494;
+}
+
 .jobCards {
     background-color: #e6eaf2;
     padding: .7rem;
