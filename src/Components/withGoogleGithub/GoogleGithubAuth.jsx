@@ -19,7 +19,7 @@ const GoogleGithubAuth = () => {
     
   }
 
-  useEffect(() => {
+
     if (googleUser || githubUser) {
       console.log(githubError);
       navigate("/");
@@ -28,7 +28,7 @@ const GoogleGithubAuth = () => {
         icon: "success"
       });
     }
-  }, [googleUser, githubUser]);
+
 
   const handleGoogleLogin = () => {
     signInWithGoogle();

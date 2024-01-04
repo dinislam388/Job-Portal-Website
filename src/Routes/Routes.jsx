@@ -16,6 +16,7 @@ import AppyForm from "../Pages/Apply Job/AppyForm";
 import Swal from "sweetalert2";
 import axios from "axios";
 import EditeJobs from "../Components/EditeJobs/EditeJobs";
+import ContexJobs from "../context/ContexJobs";
 
 const router = createBrowserRouter([
   {
@@ -44,33 +45,36 @@ const router = createBrowserRouter([
       },
       {
         path: "/personalprofile",
-        element: <PersonalProfile />,
+        element: (
+          <PrivateRoute>
+            <PersonalProfile />
+          </PrivateRoute>
+        ),
       },
       {
         path: "/addjobs",
-        element: <PrivateRoute>
-          <AddJobs />
-        </PrivateRoute>,
+        element: (
+          <PrivateRoute>
+            <AddJobs />
+          </PrivateRoute>
+        ),
       },
       {
         path: "/appyform",
         element: <AppyForm />,
       },
-      {
-        path: "/editejob",
-        element: <EditeJobs/>,
-        loader: ({ params }) => {
-          return fetch(`http://localhost:9000/jobs/${params.id}`)
-        }
-      },
+
       {
         path: "/users",
-        element: 
-        // (
+        element: (
+          // (
           // <PrivateRoute>
-            <Users />,
-          // </PrivateRoute> 
-        //  ), 
+          <ContexJobs>
+            <Users />
+          </ContexJobs>
+        ),
+        // </PrivateRoute>
+        //  ),
         action: async ({ request }) => {
           const jobData = Object.fromEntries(await request.formData());
           console.log(jobData);
@@ -92,7 +96,19 @@ const router = createBrowserRouter([
         },
         loader: () => fetch("http://localhost:9000/jobs"),
       },
-
+      {
+        path: "/editjob/:eid",
+        element: (
+          <PrivateRoute>
+            {/* <ContexJobs> */}
+              <EditeJobs />
+            {/* </ContexJobs> */}
+          </PrivateRoute>
+        ),
+        loader: ({ params }) => {
+          return fetch(`http://localhost:9000/jobs/${params.eid}`);
+        },
+      },
       {
         path: "/users/:id",
         element: (
