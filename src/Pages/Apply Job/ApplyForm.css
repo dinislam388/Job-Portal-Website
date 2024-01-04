@@ -5,7 +5,8 @@
 }
 
 .applyConatiner {
-    height: 120vh;
+    /* height: 120vh; */
+    min-height: 44rem;
     max-width: 1440px;
     padding: 2rem;
     text-align: center;
@@ -29,7 +30,7 @@
     width: 90%;
 }
 
-.inputBorder {
+.ApplyInputBox {
     /* border: 1px solid blue; */
     background-color: #d4def0;
     border: 1px solid black;
@@ -37,7 +38,7 @@
     padding: 30px;
     width: 40%;
     border-radius: 10px;
-    height: 100vh;
+    min-height: 30rem;
     margin: auto;
 }
 

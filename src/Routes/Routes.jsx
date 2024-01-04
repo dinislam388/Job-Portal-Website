@@ -16,7 +16,6 @@ import AppyForm from "../Pages/Apply Job/AppyForm";
 import Swal from "sweetalert2";
 import axios from "axios";
 import EditeJobs from "../Components/EditeJobs/EditeJobs";
-import ContexJobs from "../context/ContexJobs";
 
 const router = createBrowserRouter([
   {
@@ -38,6 +37,7 @@ const router = createBrowserRouter([
             <FavoritePage />
           </PrivateRoute>
         ),
+        loader: () => fetch("http://localhost:9000/jobs")
       },
       {
         path: "/contact",
@@ -68,13 +68,10 @@ const router = createBrowserRouter([
         path: "/users",
         element: (
           // (
-          // <PrivateRoute>
-          <ContexJobs>
+          <PrivateRoute>
             <Users />
-          </ContexJobs>
+          </PrivateRoute>
         ),
-        // </PrivateRoute>
-        //  ),
         action: async ({ request }) => {
           const jobData = Object.fromEntries(await request.formData());
           console.log(jobData);
@@ -101,7 +98,7 @@ const router = createBrowserRouter([
         element: (
           <PrivateRoute>
             {/* <ContexJobs> */}
-              <EditeJobs />
+            <EditeJobs />
             {/* </ContexJobs> */}
           </PrivateRoute>
         ),

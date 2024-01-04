@@ -7,7 +7,6 @@ import { RiDeleteBin5Line } from "react-icons/ri";
 import { useContext, useState } from "react";
 import axios from "axios";
 import { useLoaderData } from "react-router-dom";
-import { jibikaContext } from "../../context/ContexJobs";
 // import { data } from "autoprefixer";
 
 const User = () => {
@@ -31,18 +30,26 @@ const User = () => {
 
   // =============> Favorite Jobs <==============
 
-  // const handleFavoriteJob = async(userid) => {
-  //   try {
-  //     await axios.favorite(`http://localhost:9000/jobs/${userid}`)
-  //     setFavorite(users?.filter((data) => data.id !== userid))
-  //   } catch (error) {
-  //     console.error("Error:", error);
-  //   }
-  // }
-
+  const handleFavoriteJob = async(job) => {
+    const status = job.isFavorite === "undefined" ? false : !job.isFavorite;
+    await axios.put(`http://localhost:9000/jobs/${job.id}`,{
+      ...job,
+      isFavorite: status
+    } )
+    setUsers(
+      users.map((user)=> {
+        if (user.id === job.id) {
+          return {
+            ...user, 
+            isFavorite: status
+          }
+        }
+        return user;
+      })
+    )
+  }
   // =============> Add Favorite End <==============
 
-const {handleEdit} = useContext(jibikaContext)
 
   return (
     <>
@@ -52,8 +59,9 @@ const {handleEdit} = useContext(jibikaContext)
             <div className="jobLogo">
               <img src={user.logo} alt="" />
               <div className="jobCrad">
-                <MdFavoriteBorder />
 
+                <MdFavoriteBorder className={user.isFavorite && "heart"} onClick={()=> handleFavoriteJob(user)} />
+                
                 <Link to="/addjobs">
                   <MdAddCircle className="addbtn" />
                 </Link>
@@ -76,11 +84,11 @@ const {handleEdit} = useContext(jibikaContext)
             <h4 className="jobTitle">{user.title}</h4>
             <div className="cardBtn">
               <Link className="dtailsBtn" to={`/users/${user.id}`}>
-                <button>See Details</button>
+                <button>Details...</button>
               </Link>
 
               <Link className="dtailsBtn" to="/appyform">
-                <button>Apply Now</button>
+                <button>Apply</button>
               </Link>
             </div>
           </div>

@@ -7,7 +7,10 @@
 }
 
 .header {
-    position: relative;
+  position: relative;
+  /* position: fixed;
+  width: 100%;
+  z-index: 100; */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -127,76 +130,3 @@
 
 
 /* ===========> Chat GPT <========== */
-
-
-
-/* ... (your existing CSS code) ... */
-
-/* Hamburger Menu Styling */
-.hamburger-menu {
-  display: none; /* Hide by default on larger screens */
-  cursor: pointer;
-  font-size: 24px;
-  color: #1e1e26;
-}
-
-/* Navbar Styling */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-}
-
-/* Navigation Links Styling */
-.nav-links {
-  display: flex;
-  gap: 20px;
-}
-
-.nav-links a {
-  color: #1e1e26;
-  font-weight: 600;
-}
-
-/* User Profile Styling */
-.user-profile {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-/* Media query for tablets */
-@media only screen and (max-width: 991px) {
-  .hero-area {
-      gap: 20px; /* Adjust the gap as needed for smaller screens */
-  }
-
-  .hamburger-menu {
-      display: block; /* Show the hamburger menu on smaller screens */
-  }
-
-  .nav-links {
-      display: none; /* Hide navigation links by default on smaller screens */
-      flex-direction: column;
-      position: absolute;
-      top: 70px; /* Adjust the top position as needed */
-      left: 0;
-      width: 100%;
-      background-color: #cbdaf4;
-      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-  }
-
-  .nav-links.show {
-      display: flex; /* Show navigation links when the class "show" is added */
-  }
-
-  .nav-links a {
-      padding: 10px;
-      text-align: center;
-  }
-
-  .user-profile {
-      display: none; /* Hide user profile on smaller screens */
-  }
-}

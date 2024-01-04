@@ -28,7 +28,6 @@ const NavBar = () => {
       icon: "info",
     });
   };
-  // console.log(user);
   return (
     <div>
       
@@ -66,7 +65,6 @@ const NavBar = () => {
               <p className="displayemail">{user.email}</p>
               
               
-              {/* <PersonalProfile user = {user}/> */}
 
               
               <button className="displaySignoutBtn" onClick={() => navigate("/personalprofile")}>More Info...</button>
@@ -83,3 +81,15 @@ const NavBar = () => {
 };
 
 export default NavBar;
+
+
+
+
+
+
+// ===================================
+
+
+
+
+

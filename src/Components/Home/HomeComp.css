@@ -8,8 +8,8 @@
 
 .fullBody {
     width: 100%;
-    height: 205vh;
-    
+    min-height: 100vh;
+    padding: 20px 0;
     background-color: #cbdaf4;
 }
 
@@ -192,6 +192,10 @@
       height: auto;
       margin: 0;
       border-radius: 0;
+  }
+
+  .Exploreheading h1 {
+    font-size: 20px;
   }
 }
 
