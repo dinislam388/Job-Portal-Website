@@ -1,4 +1,4 @@
-import { Link, useLoaderData } from "react-router-dom";
+import { useLoaderData } from "react-router-dom";
 import "./Favorite.css"
 const Favorite = () => {
   const jobs = useLoaderData();
@@ -7,7 +7,7 @@ const Favorite = () => {
   console.log(filtereData);
   return (
     <div>
-      <div className="AllFavouritesCard">
+      <div className="favourites">
         {filtereData.map((job) => (
           <div className="job-card" key={job.id}>
             <img
@@ -19,11 +19,19 @@ const Favorite = () => {
               <h2>{job.title}</h2>
               <p>{job.companyName}</p>
               <p>{job.position}</p>
-              <Link to="/appyform">
-              <button className="FavApplyBtn">Apply</button>
-              </Link>
+              <p>{job.description}</p>
             </div>
-              
+            {/* <div className="job-actions flex jc-sb"> */}
+              {/* <div>
+                <button onClick={() => handleFavorite(job)}>
+                  <FaHeart className={job.isFavourite && "heart"} />
+                </button>
+              </div>
+              <div>
+                <button onClick={() => handleDetails(job.id)}>Details</button>
+                <button onClick={handleApplyNow}>Apply Now</button>
+              </div>
+            </div> */}
           </div>
         ))}
       </div>
